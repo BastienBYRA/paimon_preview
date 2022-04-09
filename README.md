@@ -12,6 +12,9 @@ Android : You can install the APK right [here](https://github.com/BastienBYRA/pa
 
 ### Windows
 Windows : You can install the windows application right [here](https://github.com/BastienBYRA/paimon_preview/blob/master/windows_build/paimon_information.exe?raw=true).
+If you have the message "Windows protected your PC"
+  ---> Click on "More info"
+  ---> Click on "Run anyway"
 
 ### Linux
 Linux : it's coming soon !
