@@ -11,7 +11,7 @@ You can also play with a spinner to roll character to make random team.
 Android : You can install the APK right [here](https://github.com/BastienBYRA/paimon_preview/blob/master/android_build/app.apk?raw=true).
 
 ### Windows
-Windows : it's coming soon !
+Windows : You can install the windows application right [here](https://github.com/BastienBYRA/paimon_preview/blob/master/windows_build/paimon_information.exe?raw=true).
 
 ### Linux
 Linux : it's coming soon !
