@@ -1,16 +1,18 @@
 # paimon_preview
 
-A new Flutter project.
-
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Présentation :
+```
+Paimon_preview or "Paimon Information" is a Flutter project using the [Impact Moe API](https://github.com/impact-moe/impact-api) and a Firebase database.
+In this application, you will be able to find data about the differents characters (API) and boss (Firebase).
+You can also play with a spinner to roll character to make random team.
+```
+## Installation :
+```
+Android : You can install the APK right [here](https://github.com/BastienBYRA/paimon_preview/tree/master/android_build/app.apk).
+```
+```
+Windows : it's coming soon !
+```
+```
+Linux : it's coming soon !
+```
