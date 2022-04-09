@@ -8,7 +8,7 @@ You can also play with a spinner to roll character to make random team.
 
 ## Installation :
 ### Android
-Android : You can install the APK right [here](https://github.com/BastienBYRA/paimon_preview/tree/master/android_build/app.apk).
+Android : You can install the APK right [here](https://github.com/BastienBYRA/paimon_preview/blob/master/android_build/app.apk?raw=true).
 
 ### Windows
 Windows : it's coming soon !
