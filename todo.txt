@@ -1,0 +1,5 @@
+AnimatedList : https://www.youtube.com/watch?v=ZtfItHwFlZ8
+CircularProgres style : https://pub.dev/packages/flutter_spinkit
+optimisation entre Windows / Android
+
+essayer limite taille largeur 370 et longueur 500?
