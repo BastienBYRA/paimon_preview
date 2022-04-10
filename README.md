@@ -1,10 +1,10 @@
 # paimon_preview
 
-- [Presentation](#presentation)
-- [Installation](#installation)
- - [Android](#Android)
- - [Windows](#Windows)
- - [Linux](#Linux)
+- [Presentation](#présentation :)
+- [Installation](#installation :)
+  - [Android](#Android)
+  - [Windows](#Windows)
+  - [Linux](#Linux)
 
 ## Présentation :
 
