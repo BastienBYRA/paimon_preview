@@ -1,4 +1,4 @@
-# paimon_preview
+# paimon_preview / Paimon Information
 
 - [Presentation](#presentation)
 - [Installation](#installation)
