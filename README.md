@@ -2,9 +2,9 @@
 
 - [Presentation](#presentation)
 - [Installation](#installation)
-  - [> Android](#Android)
-  - [> Windows](#Windows)
-  - [> Linux](#Linux)
+  - [Android](#Android)
+  - [Windows](#Windows)
+  - [Linux](#Linux)
 
 ## Presentation
 
