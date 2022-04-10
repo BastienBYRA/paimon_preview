@@ -1,5 +1,11 @@
 # paimon_preview
 
+[Presentation](#presentation)
+[Installation](#installation)
+- [Android](#Android)
+- [Windows](#Windows)
+- [Linux](#Linux)
+
 ## Présentation :
 
 Paimon_preview or "Paimon Information" is a responsive Flutter project using the [Impact Moe API](https://github.com/impact-moe/impact-api) and a Firebase database.
