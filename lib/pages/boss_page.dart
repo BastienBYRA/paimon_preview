@@ -65,12 +65,10 @@ class _BossPageState extends State<BossPage> {
           ? SingleChildScrollView(
               controller: _scrollController,
               child: Column(children: [
-                SizedBox(
-                  height: 20,
-                ),
+                textField(),
                 GridView.builder(
                     scrollDirection: Axis.vertical,
-                    // physics: ScrollPhysics(),
+                    physics: ScrollPhysics(),
                     primary: true,
                     shrinkWrap: true,
                     gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -164,28 +162,7 @@ class _BossPageState extends State<BossPage> {
                         child: Column(
                   // mainAxisAlignment: MainAxisAlignment.start,
                   children: [
-                    Container(
-                        padding:
-                            EdgeInsets.symmetric(vertical: 20, horizontal: 30),
-                        child: TextField(
-                          decoration: InputDecoration(
-                              border: OutlineInputBorder(
-                                borderRadius: BorderRadius.circular(10.0),
-                              ),
-                              filled: true,
-                              hintStyle: TextStyle(color: Colors.grey[800]),
-                              hintText: "Character name",
-                              fillColor: Colors.white70),
-                          onChanged: (value) {
-                            value = value.toLowerCase();
-                            setState(() {
-                              bossDisplay = widget.listBoss.where((search) {
-                                var bossName = search.name!.toLowerCase();
-                                return bossName.contains(value);
-                              }).toList();
-                            });
-                          },
-                        )),
+                    textField(),
                     (bossDisplay.isNotEmpty)
                         ? Container(
                             padding: EdgeInsets.symmetric(
@@ -292,6 +269,28 @@ class _BossPageState extends State<BossPage> {
             ),
     );
   }
+
+  Widget textField() => Container(
+      padding: EdgeInsets.symmetric(vertical: 20, horizontal: 30),
+      child: TextField(
+        decoration: InputDecoration(
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(10.0),
+            ),
+            filled: true,
+            hintStyle: TextStyle(color: Colors.grey[800]),
+            hintText: "Character name",
+            fillColor: Colors.white70),
+        onChanged: (value) {
+          value = value.toLowerCase();
+          setState(() {
+            bossDisplay = widget.listBoss.where((search) {
+              var bossName = search.name!.toLowerCase();
+              return bossName.contains(value);
+            }).toList();
+          });
+        },
+      ));
 
   Widget bossCard(int index, double widthScreen, double heightScreen) =>
       Container(

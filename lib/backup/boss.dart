@@ -20,7 +20,7 @@ dynamic bossJSON = [
   {
     "icon": "https://genshin.honeyhunterworld.com/img/enemy/m_29050101.png",
     "image":
-        "https://9to5fortnite.com/wp-content/uploads/2021/10/genshin-impact-signora-boss.jpeg",
+        "https://static0.gamerantimages.com/wordpress/wp-content/uploads/2021/10/genshin-impact-signora-boss.jpeg",
     "location": "Inazuma",
     "name": "Signora",
     "map": "https://i.redd.it/b2vhk0197de71.png"

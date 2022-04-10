@@ -1,6 +1,7 @@
 // ignore_for_file: must_be_immutable
 
 import 'dart:convert';
+import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_spinkit/flutter_spinkit.dart';
@@ -60,15 +61,15 @@ class _CharacterPageState extends State<CharacterPage> {
     super.initState();
     loadData();
 
-    // scrollCharacter.addListener(() {
-    //   setState(() {
-    //     if (scrollCharacter.offset >= 200) {
-    //       _showBackToTopButton = true; // show the back-to-top button
-    //     } else {
-    //       _showBackToTopButton = false; // hide the back-to-top button
-    //     }
-    //   });
-    // });
+    scrollCharacter.addListener(() {
+      setState(() {
+        if (scrollCharacter.offset >= 200) {
+          _showBackToTopButton = true; // show the back-to-top button
+        } else {
+          _showBackToTopButton = false; // hide the back-to-top button
+        }
+      });
+    });
   }
 
   @override
@@ -93,18 +94,18 @@ class _CharacterPageState extends State<CharacterPage> {
     return Scaffold(
         // backgroundColor: Colors.grey[100],
 
-        /// Problem, don't dissepear when we change the view between Phone/PC
-
-        // floatingActionButton: _showBackToTopButton == false
-        //     ? null
-        //     : FloatingActionButton(
-        //         backgroundColor: Colors.white,
-        //         onPressed: scrollToTop,
-        //         child: const Icon(
-        //           Icons.arrow_upward,
-        //           color: Colors.black,
-        //         ),
-        //       ),
+        floatingActionButton: _showBackToTopButton == false
+            ? null
+            : (Platform.isAndroid && _showBackToTopButton == true)
+                ? FloatingActionButton(
+                    backgroundColor: Colors.white,
+                    onPressed: scrollToTop,
+                    child: const Icon(
+                      Icons.arrow_upward,
+                      color: Colors.black,
+                    ),
+                  )
+                : null,
 
         //Data not already loaded
         body: (dataLoad == false)

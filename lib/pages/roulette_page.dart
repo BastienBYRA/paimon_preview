@@ -417,11 +417,19 @@ class _RoulettePageState extends State<RoulettePage> {
                   },
                   width: (widthScreen >= 500) ? null : widthScreen * 0.20,
                 ),
-                (widthScreen >= 430)
-                    ? Text((character.name!.length < 13)
+                (widthScreen >= 300 && widthScreen < 350)
+                    ? Text((character.name!.length < 8)
                         ? character.name.toString()
-                        : character.name!.substring(0, 10) + '...')
-                    : Container(),
+                        : character.name!.substring(0, 6) + '...')
+                    : (widthScreen >= 350 && widthScreen < 450)
+                        ? Text((character.name!.length < 10)
+                            ? character.name.toString()
+                            : character.name!.substring(0, 7) + '...')
+                        : (widthScreen >= 450)
+                            ? Text((character.name!.length < 13)
+                                ? character.name.toString()
+                                : character.name!.substring(0, 10) + '...')
+                            : Container(),
               ],
             )
         ]),
@@ -442,7 +450,7 @@ class _RoulettePageState extends State<RoulettePage> {
                 },
                 width: (widthScreen >= 500) ? null : widthScreen * 0.20,
               ),
-              (widthScreen >= 430)
+              (widthScreen >= 450)
                   ? Text((currentBoss.name!.length < 13)
                       ? currentBoss.name.toString()
                       : currentBoss.name!.substring(0, 10) + '...')
@@ -454,6 +462,7 @@ class _RoulettePageState extends State<RoulettePage> {
 
   Widget previousTeam(double widthScreen) => Column(children: [
         ListView.separated(
+            physics: ScrollPhysics(),
             separatorBuilder: (BuildContext context, int index) {
               return SizedBox(height: 20);
             },
@@ -501,47 +510,49 @@ class _RoulettePageState extends State<RoulettePage> {
                                         : (widthScreen >= 1000)
                                             ? widthScreen * 0.07
                                             : widthScreen * 0.15),
-                                (widthScreen >= 460 && widthScreen < 800)
-                                    ? Text((character.name!.length < 13)
+                                (widthScreen >= 380 && widthScreen < 460)
+                                    ? Text((character.name!.length < 10)
                                         ? character.name.toString()
-                                        : character.name!.substring(0, 10) +
+                                        : character.name!.substring(0, 7) +
                                             '...')
-                                    : (widthScreen >= 800 && widthScreen < 1000)
-                                        ? Text((character.name.toString()))
-                                        : (widthScreen >= 1000 &&
-                                                widthScreen < 1100)
-                                            ? Text((character.name!.length < 9)
-                                                ? character.name.toString()
-                                                : character.name!.substring(0, 7) +
-                                                    '...')
-                                            : (widthScreen >= 1100 &&
-                                                    widthScreen < 1300)
-                                                ? Text((character.name!.length < 11)
+                                    : (widthScreen >= 460 && widthScreen < 800)
+                                        ? Text((character.name!.length < 13)
+                                            ? character.name.toString()
+                                            : character.name!.substring(0, 10) +
+                                                '...')
+                                        : (widthScreen >= 800 &&
+                                                widthScreen < 1000)
+                                            ? Text((character.name.toString()))
+                                            : (widthScreen >= 1000 &&
+                                                    widthScreen < 1100)
+                                                ? Text((character.name!.length < 9)
                                                     ? character.name.toString()
-                                                    : character.name!.substring(0, 9) +
+                                                    : character.name!.substring(0, 7) +
                                                         '...')
-                                                : (widthScreen >= 1300 &&
-                                                        widthScreen < 1500)
-                                                    ? Text((character.name!.length < 13)
+                                                : (widthScreen >= 1100 &&
+                                                        widthScreen < 1300)
+                                                    ? Text((character.name!.length < 11)
                                                         ? character.name
                                                             .toString()
-                                                        : character.name!
-                                                                .substring(
-                                                                    0, 11) +
+                                                        : character.name!.substring(0, 9) +
                                                             '...')
-                                                    : (widthScreen >= 1500 &&
-                                                            widthScreen < 1700)
-                                                        ? Text((character.name!
-                                                                    .length <
-                                                                17)
+                                                    : (widthScreen >= 1300 &&
+                                                            widthScreen < 1500)
+                                                        ? Text((character.name!.length < 13)
                                                             ? character.name
                                                                 .toString()
-                                                            : character.name!
-                                                                    .substring(0, 15) +
+                                                            : character.name!.substring(0, 11) +
                                                                 '...')
-                                                        : (widthScreen >= 1700)
-                                                            ? Text((character.name.toString()))
-                                                            : Container()
+                                                        : (widthScreen >= 1500 &&
+                                                                widthScreen <
+                                                                    1700)
+                                                            ? Text((character.name!.length < 17)
+                                                                ? character.name
+                                                                    .toString()
+                                                                : character.name!.substring(0, 15) + '...')
+                                                            : (widthScreen >= 1700)
+                                                                ? Text((character.name.toString()))
+                                                                : Container()
                               ],
                             )
                         ]),
@@ -654,6 +665,7 @@ class _RoulettePageState extends State<RoulettePage> {
               child: IconButton(
                   onPressed: () {
                     setState(() {
+                      print(MediaQuery.of(context).size.width);
                       showMore = !showMore;
                     });
                   },
