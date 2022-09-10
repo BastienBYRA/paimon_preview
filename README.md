@@ -4,7 +4,6 @@
 - [Installation](#installation)
   - [Android](#Android)
   - [Windows](#Windows)
-  - [Linux](#Linux)
 
 ## Presentation
 
@@ -25,6 +24,3 @@ If you have the message "Windows protected your PC"
 > Click on "More info".
 > Click on "Run anyway".
 ```
-
-### Linux
-Linux : it's coming soon !
